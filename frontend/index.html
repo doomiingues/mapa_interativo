@@ -5,53 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <title>Painel de Transporte</title>
 </head>
 <body>
 
-    <header>Painel de Transporte</header> 
-    <section>
+    <header>
+        <h2 class="header_bar">
+            Painel de Transporte
+        </h2>
+    </header> 
+    <section class="nav_bar">
         <input type="date">
-        <button>
+        <button class="btn_atualizar" class="btn_azul">
             Atualizar Dados
         </button>
         <input type="text" placeholder="Buscar Cliente/Cidade">
-    </section>
-    <section>
+    </section >
+    <section class="bloco_de_legenda"   >
         <!-- resumo das informaçöes   -->
-        <div>
-            <h1>Resumo Geral</h1>
-            <h3>Total de Registros:</h3>
-            <p>58</p>
-            <ul>
-                <li>Entregas</li>
-                    <p>40</p>
-                <li>Retiras</li>
-                    <p>15</p>
-                <li>Erros</li>
-                    <p>3</p>
-                <li>Notas Não Feitas</li>
-            </ul>
-        </div>
-        <div>
-            <h1>Filtros</h1>
-            <p>📃</p>
-            <ul>
-                <li>Entregas</li>
-                <li>Retiras</li>
-                <li>Erros</li>
-            </ul>
-            <h1>Cidades</h1>
-            <ul>
-                <li>Campinas</li>
-                <li>Hortolandia</li>
-                <li>Sumaré</li>
-            </ul>
+        <div class="coluna_lateral">
+            <div class="bloco_registros">
+                <h1>Resumo Geral</h1>
+                <h3>Total de Registros:</h3>
+                <p>58</p>
+                <ul>
+                    <li>Entregas</li>
+                        <p>40</p>
+                    <li>Retiras</li>
+                        <p>15</p>
+                    <li>Erros</li>
+                        <p>3</p>
+                    <li>Notas Não Feitas</li>
+                </ul>
+            </div>
+            <div class="bloco_filtros">
+                <h1>Filtros</h1>
+                <p>📃</p>
+                <ul>
+                    <li>Entregas</li>
+                    <li>Retiras</li>
+                    <li>Erros</li>
+                </ul>
+                <h1>Cidades</h1>
+                <ul>
+                    <li>Campinas</li>
+                    <li>Hortolandia</li>
+                    <li>Sumaré</li>
+                </ul>
+            </div>
         </div>
         <!--  mapa, item principal do site -->
         <main>
-            <div>
-                Mapa
+            <div class="box_mapa">
+                <div id="map">
+
+                </div>
             </div>
         </main> 
     </section>
